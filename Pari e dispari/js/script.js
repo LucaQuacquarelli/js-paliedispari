@@ -31,7 +31,7 @@ if (evenOdd == true) {
     console.log("La somma è dispari");
 }
 // Dichiariamo chi ha vinto.
-if (selectEvenOdd == evenOdd) {
+if (evenOdd == true && selectEvenOdd == "pari" || evenOdd == false && selectEvenOdd == "dispari" ) {
     console.log("Hai Vinto!!!");
 } else {
     console.log("Hai Perso!!!");
