@@ -11,11 +11,17 @@ function isEven(value) {
     }
 }
 // L'utente sceglie pari o dispari 
-var selectEvenOdd = prompt("Scegli Pari o Dispari");
-console.log("L'Utente ha scelto: " + selectEvenOdd);
-// e inserisce un numero da 1 a 5.
-var userNumber = parseInt(prompt("Inserisci un numero compreso tra 1 e 5"));
-console.log("Il numero scelto dall'Utente é:", userNumber);
+do {
+    var selectEvenOdd = prompt("Scegli Pari o Dispari");
+    console.log("L'Utente ha scelto: " + selectEvenOdd);
+} while (selectEvenOdd != "pari" && selectEvenOdd != "dispari");
+
+do {
+    // e inserisce un numero da 1 a 5.
+    var userNumber = parseInt(prompt("Inserisci un numero compreso tra 1 e 5"));
+    console.log("Il numero scelto dall'Utente é:", userNumber);
+} while ((userNumber < 1 || userNumber > 5));
+
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 var pcNumber = getRandomNumber(1, 5);
 console.log("Il numero scelto dal Computer é:", pcNumber);
